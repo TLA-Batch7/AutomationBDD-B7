@@ -2,6 +2,7 @@ package step_definitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import utils.BrowserUtils;
 
 public class HomeSteps {

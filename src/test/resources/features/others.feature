@@ -1,5 +1,6 @@
 Feature: Others page scenarios
 
+  @smoke @regression
   Scenario: Verify Disabled button is disabled initially
     Given I navigate to homepage
     When I open Others page
