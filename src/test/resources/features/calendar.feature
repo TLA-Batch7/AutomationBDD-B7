@@ -2,7 +2,6 @@ Feature: Calendar page scenarios
 
   @smoke
   Scenario: Choosing date from calendar
-    Given I navigate to homepage
     When I click nav button "Calendar"
     And I click a button "endDateInput"
     And I click a button "calendarTomorrowDate"
@@ -11,7 +10,6 @@ Feature: Calendar page scenarios
 
     @regression
     Scenario: Choosing date from the calendar - Start date test
-      Given I navigate to homepage
       When I click nav button "Calendar"
       * I click a button "endDateInput"
       * I click a button "calendarTomorrowDate"

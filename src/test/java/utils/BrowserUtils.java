@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 import static java.lang.Thread.sleep;
 
 public class BrowserUtils {
@@ -30,6 +32,13 @@ public class BrowserUtils {
         driver = null;
     }
 
+    public static void quitDriver(){
+        if(driver != null){
+            driver.quit();
+            driver = null;
+        }
+    }
+
     private static void initializeDriver(String browser){
         switch(browser) {
             case "chrome":
@@ -44,6 +53,9 @@ public class BrowserUtils {
                 WebDriverManager.iedriver().setup();
                 driver = new InternetExplorerDriver();
         }
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.get(ConfigReader.readProperty("config.properties","url"));
     }
 
 
@@ -107,7 +119,7 @@ public class BrowserUtils {
         highlightElement(element);
         return element.getText();
     }
-    public static void click(WebElement element){
+    public static void click(WebElement element, String string){
         //TODO: apply report -> logInfo("clicked the button ", element);
         waitForElementClickability(element);
         moveIntoView(element);
