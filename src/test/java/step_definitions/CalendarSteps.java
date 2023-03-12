@@ -19,8 +19,9 @@ public class CalendarSteps {
     }
 
     @When("I click nav button {string}")
-    public void i_click_nav_button(String string) {
-        System.out.println("clicking on calendar page");
+    public void i_click_nav_button() {
+//        System.out.println("clicking on calendar page");
+        BrowserUtils.click(homePage.navCalendarBtn);
     }
     @When("I click a button {string}")
     public void i_click_a_button(String string) {

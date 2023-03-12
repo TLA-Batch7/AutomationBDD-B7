@@ -119,7 +119,7 @@ public class BrowserUtils {
         highlightElement(element);
         return element.getText();
     }
-    public static void click(WebElement element, String string){
+    public static void click(WebElement element){
         //TODO: apply report -> logInfo("clicked the button ", element);
         waitForElementClickability(element);
         moveIntoView(element);

@@ -1,6 +1,6 @@
 Feature: Calendar page scenarios
 
-  @smoke
+  @smoke @US003
   Scenario: Choosing date from calendar
     When I click nav button "Calendar"
     And I click a button "endDateInput"
