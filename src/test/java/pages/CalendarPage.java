@@ -10,13 +10,24 @@ public class CalendarPage {
         PageFactory.initElements(BrowserUtils.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//div[@class='react-datepicker__input-container'])[2]")
+    @FindBy(xpath = "(//input[@type='text'])[2]")
     public WebElement endDateInput;
 
-    @FindBy(xpath = "//div[contains(@class, 'selected')]/following-sibling::div")
+    @FindBy(xpath = "//div[contains(@class, 'day--today')]/following-sibling::div")
     public WebElement calendarTomorrowDate;
 
     @FindBy(xpath = "//button[text()='Submit']")
     public WebElement submitCalendarBtn;
 
+    @FindBy(id = "num-days")
+    public WebElement resultText;
+
+    @FindBy(xpath = "//div[@class='react-datepicker__input-container']/input")
+    public WebElement startDateTxt;
+
+    @FindBy(xpath = "(//div[@class='react-datepicker__input-container'])[2]/input")
+    public WebElement endDateTxt;
+
+    @FindBy(id = "num-days")
+    public WebElement numberOfDaysTxt;
 }

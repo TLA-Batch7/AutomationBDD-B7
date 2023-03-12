@@ -17,4 +17,7 @@ public class HomePage {
 
     @FindBy(xpath ="//a[text()='Selectors']")
     public WebElement navSelectorsBtn;
+
+    @FindBy(xpath ="//a[text()='Others']")
+    public WebElement navOthersBtn;
 }
