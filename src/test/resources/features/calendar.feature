@@ -3,6 +3,7 @@ Feature: Calendar page scenarios
   @smoke @US1015
   Scenario: Choosing date from calendar
     When I click nav button "Calendar"
+    #When I capture today's date
     And I click a button "endDateInput"
     And I click a button "calendarTomorrowDate"
     And I click a button "submitCalendarButton"
