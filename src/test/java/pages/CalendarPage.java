@@ -12,4 +12,11 @@ public class CalendarPage {
 
     @FindBy(xpath = "(//div[@class='react-datepicker__input-container'])[2]")
     public WebElement endDateInput;
+
+    @FindBy(xpath = "//div[contains(@class, 'selected')]/following-sibling::div")
+    public WebElement calendarTomorrowDate;
+
+    @FindBy(xpath = "//button[text()='Submit']")
+    public WebElement submitCalendarBtn;
+
 }

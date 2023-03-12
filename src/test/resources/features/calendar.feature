@@ -1,6 +1,6 @@
 Feature: Calendar page scenarios
 
-  @smoke @US003
+  @smoke @US1015
   Scenario: Choosing date from calendar
     When I click nav button "Calendar"
     And I click a button "endDateInput"
@@ -8,7 +8,7 @@ Feature: Calendar page scenarios
     And I click a button "submitCalendarButton"
     Then Verify text will display 1 day difference
 
-    @regression
+    @regression @US1016
     Scenario: Choosing date from the calendar - Start date test
       When I click nav button "Calendar"
       * I click a button "endDateInput"

@@ -23,4 +23,14 @@ public class HomeSteps {
         BrowserUtils.assertEquals(page.headerTitle.getText(), string);
         BrowserUtils.closeDriver();
     }
+
+
+    @Then("Verify button {string} is displayed")
+    public void verifyButtonIsDisplayed(String btn) {
+        System.out.println("Verify Home button is displayed");
+        System.out.println("Verify Calendar button is displayed");
+        System.out.println("Verify User-Mgt button is displayed");
+        System.out.println("Verify Others button is displayed");
+        System.out.println("Verify Tables button is displayed");
+    }
 }

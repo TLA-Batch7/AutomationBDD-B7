@@ -8,6 +8,8 @@ import pages.CalendarPage;
 import pages.HomePage;
 import utils.BrowserUtils;
 
+import java.util.Locale;
+
 public class CalendarSteps {
 
     CalendarPage page;
@@ -19,15 +21,42 @@ public class CalendarSteps {
     }
 
     @When("I click nav button {string}")
-    public void i_click_nav_button() {
-//        System.out.println("clicking on calendar page");
-        BrowserUtils.click(homePage.navCalendarBtn);
+    public void i_click_nav_button(String navBtn) {
+        switch (navBtn.toLowerCase()) {
+            case "calendar" :
+                BrowserUtils.click(homePage.navCalendarBtn);
+                break;
+            case "selectors" :
+                BrowserUtils.click(homePage.navSelectorsBtn);
+                break;
+            default:
+                System.out.println("Invalid Button");
+
+        }
+//        System.out.println("clicking on calendar page" + navBtn);
+//        System.out.println("Click on nav button Selectors" + navBtn);
     }
     @When("I click a button {string}")
-    public void i_click_a_button(String string) {
-        System.out.println("click on endDateInputField");
-        System.out.println("click on calendarTomorrowDate");
-        System.out.println("click on submit");
+    public void i_click_a_button(String calendarBtn) {
+        switch (calendarBtn.toLowerCase()) {
+            case "endDateInput":
+                BrowserUtils.click(page.endDateInput);
+                break;
+            case "calendarTomorrowDate":
+                BrowserUtils.click(page.calendarTomorrowDate);
+                break;
+            case "submitCalendarButton":
+                BrowserUtils.click(page.submitCalendarBtn);
+                break;
+            default:
+                System.out.println("Invalid button");
+        }
+
+//        System.out.println("click on endDateInputField");
+//        System.out.println("click on calendarTomorrowDate");
+//        System.out.println("click on submit");
+
+        BrowserUtils.click(page.endDateInput);
 
     }
 
