@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = "step_definitions",
         stepNotifications = true,
         dryRun = false
-        ,tags =  "@otherScenario"
+        ,tags = "@US802"
 )
 public class CukesRunner {
 }

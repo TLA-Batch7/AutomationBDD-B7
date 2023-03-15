@@ -1,13 +1,14 @@
+@otherScenarios
 Feature: Others page scenarios
-
-  @smoke @regression @US2001 @otherScenario
-  Scenario: Verify Disabled button is disabled initially
+  Background:
     When I click nav button "Others"
+
+  @smoke @regression @US2001
+  Scenario: Verify Disabled button is disabled initially
     Then Verify Disabled button is disabled
 
-    @US2002 @othersScenario
-    Scenario: Verify Disabled buttons changed on click
-      When I click nav button "Others"
-      Then Verify Disabled button is disabled
-      When I click on Toggle button
-      Then Verify Disabled button is enabled
+  @US2002
+  Scenario: Verify Disabled buttons changed on click
+    Then Verify Disabled button is disabled
+    When I click on Toggle button
+    Then Verify Disabled button is enabled

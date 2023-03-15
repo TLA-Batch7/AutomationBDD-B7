@@ -20,9 +20,6 @@ public class OthersSteps {
         String disableText = "DISABLED BUTTON";
         BrowserUtils.assertEquals(page.statusBtn.getText(),disableText);
         BrowserUtils.isDisabled(page.statusBtn);
-
-        BrowserUtils.quitDriver();
-//        System.out.println("verified disabled button");
     }
 
     @When("I click on Toggle button")
@@ -36,9 +33,6 @@ public class OthersSteps {
         String enableText = "ENABLED BUTTON";
         BrowserUtils.assertEquals(page.statusBtn.getText(), enableText);
         BrowserUtils.isEnabled(page.statusBtn);
-
-        BrowserUtils.quitDriver();
-//        System.out.println("verified enabled status");
     }
 
 }

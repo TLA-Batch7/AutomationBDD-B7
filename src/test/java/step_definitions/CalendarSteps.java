@@ -3,24 +3,23 @@ package step_definitions;
 import com.sun.xml.internal.ws.db.glassfish.BridgeWrapper;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.CalendarPage;
 import pages.HomePage;
+import pages.PopUpPage;
 import utils.BrowserUtils;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Locale;
-
 public class CalendarSteps {
 
     CalendarPage page;
     HomePage homePage;
+    PopUpPage popUpPage;
 
     public CalendarSteps(){
         this.page = new CalendarPage();
         homePage = new HomePage();
+        popUpPage = new PopUpPage();
     }
 
     @When("I click nav button {string}")
@@ -34,12 +33,13 @@ public class CalendarSteps {
                 break;
             case "others":
                 BrowserUtils.click(homePage.navOthersBtn);
+                break;
+            case "pop-up":
+                BrowserUtils.click(homePage.navPopUpBtn);
+                break;
             default:
                 System.out.println("Invalid Button");
-
         }
-//        System.out.println("clicking on calendar page" + navBtn);
-//        System.out.println("Click on nav button Selectors" + navBtn);
     }
     @When("I click a button {string}")
     public void i_click_a_button(String calendarBtn) {
@@ -53,21 +53,19 @@ public class CalendarSteps {
             case "submitCalendarButton":
                 BrowserUtils.click(page.submitCalendarBtn);
                 break;
+            case "Message" :
+                BrowserUtils.click(popUpPage.messageBtn);
+                break;
+            case "BMI Calculator":
+                BrowserUtils.click(popUpPage.bmiCalculatorBtn);
             default:
                 System.out.println("Invalid button");
         }
-
-//        System.out.println("click on endDateInputField");
-//        System.out.println("click on calendarTomorrowDate");
-//        System.out.println("click on submit");
-
-        BrowserUtils.click(page.endDateInput);
-
+        //BrowserUtils.click(page.endDateInput);
     }
 
     @Then("Verify text will display {int} day difference")
     public void verify_text_will_display_day_difference(Integer int1) {
-//        System.out.println("Verify text display is 1 day different");
         String startDate = page.startDateTxt.getAttribute("value");
         String endDate = page.endDateTxt.getAttribute("value");
 
@@ -80,8 +78,6 @@ public class CalendarSteps {
         String actualTxt = BrowserUtils.getText(page.numberOfDaysTxt);
 
         BrowserUtils.assertEquals(actualTxt,expectedTxt);
-
-        BrowserUtils.quitDriver();
     }
 
     @Then("Verify text contains current date")

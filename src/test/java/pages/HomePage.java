@@ -20,4 +20,17 @@ public class HomePage {
 
     @FindBy(xpath ="//a[text()='Others']")
     public WebElement navOthersBtn;
+
+    @FindBy(xpath = "//a[text()='Pop-Up']")
+    public WebElement navPopUpBtn;
+
+    @FindBy(xpath = "//a[text()='Home']")
+    public WebElement navHomeBtn;
+
+    @FindBy(xpath = "//a[text()='User-Mgt']")
+    public WebElement navUserMgtBtn;
+
+    @FindBy(xpath = "//a[text()='Tables']")
+    public WebElement navTablesBtn;
+
 }
