@@ -37,6 +37,12 @@ public class CalendarSteps {
             case "pop-up":
                 BrowserUtils.click(homePage.navPopUpBtn);
                 break;
+            case "user-mgt":
+                BrowserUtils.click(homePage.navUserMgtBtn);
+                break;
+            case "multiple-window":
+                BrowserUtils.click(homePage.navMultipleWindowBtn);
+                break;
             default:
                 System.out.println("Invalid Button");
         }

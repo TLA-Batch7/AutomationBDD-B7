@@ -33,4 +33,8 @@ public class HomePage {
     @FindBy(xpath = "//a[text()='Tables']")
     public WebElement navTablesBtn;
 
+    @FindBy(xpath = "//a[text()='Multiple-window']")
+    public WebElement navMultipleWindowBtn;
+
+
 }

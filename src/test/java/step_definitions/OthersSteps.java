@@ -35,4 +35,5 @@ public class OthersSteps {
         BrowserUtils.isEnabled(page.statusBtn);
     }
 
+
 }
