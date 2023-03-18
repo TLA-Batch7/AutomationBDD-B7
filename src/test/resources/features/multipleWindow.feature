@@ -15,3 +15,12 @@ Feature: Multiple window page scenarios
       | Launch TLA      |
       | Launch Google   |
       | Launch Facebook |
+
+    @US9001c
+    Scenario Outline: Verify social media buttons are enabled using scenario outline
+      Then Verify "<button>" is enabled
+      Examples:
+      |button|
+      | Launch TLA      |
+      | Launch Google   |
+      | Launch Facebook |

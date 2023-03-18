@@ -60,7 +60,7 @@ public class BrowserUtils {
 
 
 
-    public static void switchToNewWindow(WebDriver driver){
+    public static void switchToNewWindow(){
         for(String each: driver.getWindowHandles()){
             if(!each.equalsIgnoreCase(driver.getWindowHandle())) {
                 System.out.println(driver.getTitle());

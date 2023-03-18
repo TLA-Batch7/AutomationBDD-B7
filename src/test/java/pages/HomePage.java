@@ -39,5 +39,25 @@ public class HomePage {
     @FindBy(xpath = "//a[text()='Inputs']")
     public WebElement navInputsBtn;
 
+    @FindBy(linkText="PHP Travels")
+    public WebElement phpTravelsLink;
+
+    @FindBy(linkText = "Mercury tours")
+    public WebElement mercuryToursLink;
+
+    @FindBy(linkText = "Internet")
+    public WebElement internetLink;
+
+    @FindBy(linkText = "E-commerce")
+    public WebElement eCommerceLink;
+
+    @FindBy(linkText = "Passion Tea Company")
+    public WebElement passionTeaCompLink;
+
+    @FindBy(linkText = "Saucedemo")
+    public WebElement sauceDemoLink;
+
+    @FindBy(linkText = "Shopping Cart")
+    public WebElement shoppingCartLink;
 
 }
