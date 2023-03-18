@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.CalendarPage;
 import pages.HomePage;
+import pages.InputsPage;
 import pages.PopUpPage;
 import utils.BrowserUtils;
 
@@ -16,10 +17,13 @@ public class CalendarSteps {
     HomePage homePage;
     PopUpPage popUpPage;
 
+    InputsPage inputsPage;
+
     public CalendarSteps(){
         this.page = new CalendarPage();
         homePage = new HomePage();
         popUpPage = new PopUpPage();
+        inputsPage = new InputsPage();
     }
 
     @When("I click nav button {string}")
@@ -43,6 +47,9 @@ public class CalendarSteps {
             case "multiple-window":
                 BrowserUtils.click(homePage.navMultipleWindowBtn);
                 break;
+            case "inputs":
+                BrowserUtils.click(homePage.navInputsBtn);
+                break;
             default:
                 System.out.println("Invalid Button");
         }
@@ -64,6 +71,9 @@ public class CalendarSteps {
                 break;
             case "BMI Calculator":
                 BrowserUtils.click(popUpPage.bmiCalculatorBtn);
+                break;
+            case "Send":
+                BrowserUtils.click(inputsPage.sendBtn);
             default:
                 System.out.println("Invalid button");
         }
