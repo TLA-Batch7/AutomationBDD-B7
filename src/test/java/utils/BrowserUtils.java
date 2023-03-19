@@ -78,6 +78,8 @@ public class BrowserUtils {
                     js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "color: black;" +
                             "border: 3px solid red; background: yellow");
                         //TODO: apply report screenshot here
+                    sleep(200);
+                    CucumberLogUtils.logInfo("clicked on " + element.toString(), false);
                 } else {
                     sleep(600);
                     js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "");
@@ -129,14 +131,18 @@ public class BrowserUtils {
     public static void assertEquals(String actual, String expected){
         //TODO: apply report -> logInfo("Expected: " + expected);
         //TODO: apply report -> logInfo("Actual: " + actual);
+        CucumberLogUtils.logInfo("Actual: " + actual, false );
+        CucumberLogUtils.logInfo("Expected: " + expected, false);
         Assert.assertEquals(expected, actual);
     }
     public static void assertFalse(boolean result){
         //TODO: apply report -> logInfo("Expected: " + result);
+        CucumberLogUtils.logInfo("Expected: " + result, false);
         Assert.assertFalse(result);
     }
     public static void assertTrue(boolean result){
         //TODO: apply report -> logInfo("Expected: " + result);
+        CucumberLogUtils.logInfo("Expected: " + result, false);
         Assert.assertTrue(result);
     }
     public static void isDisplayed(WebElement element){

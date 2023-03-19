@@ -1,6 +1,7 @@
+@homeScenarios
 Feature: Homepage scenarios
 
-  @HomeScenarios @US1021
+  @US1021
   Scenario:Test Header
     Then I should see header as "Automation with Selenium"
 

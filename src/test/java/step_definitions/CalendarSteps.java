@@ -1,6 +1,5 @@
 package step_definitions;
 
-import com.sun.xml.internal.ws.db.glassfish.BridgeWrapper;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.CalendarPage;
