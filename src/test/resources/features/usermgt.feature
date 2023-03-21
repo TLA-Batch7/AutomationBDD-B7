@@ -1,3 +1,4 @@
+@user-mgt
 Feature: User-Mgt page scenarios
 
   Background:

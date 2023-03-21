@@ -53,7 +53,7 @@ public class BrowserUtils {
                 WebDriverManager.iedriver().setup();
                 driver = new InternetExplorerDriver();
         }
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get(ConfigReader.readProperty("config.properties","url"));
     }
