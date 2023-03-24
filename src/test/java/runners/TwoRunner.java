@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = "step_definitions",
         stepNotifications = true,
         dryRun = false
-        ,tags = "@US801"
+        ,tags = "@US1022"
 )
 public class TwoRunner {
 }
